@@ -46,7 +46,7 @@ body{
     width: 100%;
     text-align: center;
     color: transparent;
-    text-shadow: 1px 1px #fff5ee36, -1px -1px #e2738c;
+    text-shadow: 2px 1px white, 4px 4px #fff5ee36;
     letter-spacing: 0.25em;
 }
 h1{

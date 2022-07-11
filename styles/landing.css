@@ -1,0 +1,251 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+body{
+    background-color:	#fff5ee;
+    overflow: hidden;
+}
+.landing-container{
+    background: 
+    repeating-linear-gradient(	45deg,		black, 			black 1px, transparent 1px, transparent 25px),
+    radial-gradient(circle at 50% 40%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
+    radial-gradient(circle at 50% 100%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
+
+    repeating-linear-gradient(	45deg,		#eaa8b7, 			#eaa8b7 2px, transparent 2px, transparent 25px),
+    radial-gradient(circle at 51.5% 9.5%, black 0%, black 20%, transparent 10%, transparent 100%),
+    radial-gradient(circle at 50% 67%, black 0%, black 20%, transparent 10%, transparent 100%),
+    linear-gradient(90deg,	#eaa8b7 0%, 	#eaa8b7 50%, black 50%, black 100%);
+    
+    ;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 90vh 10vh;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    border: 5px outset #e2738c;
+    aspect-ratio: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    box-shadow: 7px -1px 5px 5px rgba(0, 0, 0, 0.333)    ;
+    transform: translate(-50%, -50%);
+    background-color: #fff5ee36;
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+}
+.img-container>h2{
+    font-size: 5em;
+    width: 100%;
+    text-align: center;
+    color: transparent;
+    text-shadow: 1px 1px #fff5ee36, -1px -1px #e2738c;
+    letter-spacing: 0.25em;
+}
+h1{
+    z-index: 0;
+    color: white;
+    font-size: 8rem;
+    position: absolute;
+    left: -20%;
+    bottom: 0%;
+    transform: scaleY(2) scaleX(1.25);
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px white, -1px -1px black;
+}
+h1:nth-of-type(2n){
+    transform: scaleY(2) scaleX(1.25);
+    left: 60%;
+    bottom:80%;
+    z-index: 0;
+    text-shadow: 1px 1px white, -1px -1px #eaa8b7;
+}
+.landing-img:before{
+    width: 50vw;
+    aspect-ratio: 1;
+    content: "";
+    background-color: red;
+}
+.nav-container{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    justify-self: flex-end;
+    margin-right: 2.5%;
+    font-size: 3rem;
+    padding: 1%;
+}
+.backdrop-container{
+    box-shadow: 2px -2px 5px 5px rgba(0, 0, 0, 0.333)    ;
+    border-radius: 50%;
+    z-index: 3;
+    position: absolute;
+    left: 25%;
+    top: 75%;
+    transform: translate(-50%, -50%) rotate(35deg);
+    content: '';
+    width: 15vw;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    background: repeating-linear-gradient(		#e2738c, 		#e2738c 20px, black 20px, black 25px);
+}
+.backdrop-container-2{
+    box-shadow: 7px -1px 5px 5px rgba(0, 0, 0, 0.333)    ;
+    z-index: 1;
+    position: absolute;
+    left: 65%;
+    top: 15%;
+    content: '';
+    width: 15vw;
+    aspect-ratio: 1;
+    border: 2px solid white;
+    background: repeating-linear-gradient(		#e2738c, 		#e2738c 20px, white 20px, white 25px);
+}
+.nav-list{
+    list-style: none;
+}
+.nav-list>li{
+    font-weight: 1000;
+}
+.nav-list>li>.link{
+    text-decoration: none;
+    color: white;
+    transition: all 150ms ease-in-out;
+    text-shadow: 1px 1px white, -1px -1px #eaa8b7;
+
+}
+.nav-list>li>.link:hover{
+    color: #e2738c !important;
+}
+.nav-list>li>.link:visited{
+    color: white;
+}
+.landing-body{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+@media only screen and (max-width: 1780px){
+    h1{
+        font-size: 7em;
+    }
+}
+@media only screen and (max-width: 1780px){
+    h1{
+        font-size: 7em;
+    }
+}
+@media only screen and (max-width: 1600px){
+    h1{
+        font-size: 6.5em !important;
+    }
+    .img-container>h2{
+        font-size: 4em;
+    }
+    .backdrop-container, .backdrop-container-2{
+        width: 25vw;
+    }
+    .img-container{
+        width: 55vw;
+    }
+}
+@media only screen and (max-width: 1220px){
+    h1{
+        font-size: 5.5em !important;
+    }
+    .backdrop-container{
+        left: 25%;
+        top: 65%;
+    }
+    .backdrop-container-2{
+        top: 20%;
+    }
+    .img-container>h2{
+        font-size: 3em;
+    }
+}
+@media only screen and (max-width: 1080px){
+    h1{
+        bottom: 15%;
+    }
+    h1:nth-of-type(2n){
+        top: 10%;
+    }
+
+}
+@media only screen and (max-width: 880px){
+    h1{
+        font-size: 7em;
+    }
+    .backdrop-container{
+        left: 20%;
+        top: 70%;
+    }
+    .backdrop-container-2{
+        top: 25%;
+        left: 70%;
+    }
+    .img-container{
+        width: 55vw;
+        aspect-ratio: 1;
+        background-position: 50% 50%;
+    }
+}
+@media only screen and (max-width: 880px){
+    h1{
+        left: -47%;
+    }
+    h1:nth-of-type(2n){
+        left: 30%;
+    }
+
+}
+@media only screen and (max-width: 700px){
+    h1{
+        left: -55%;
+    }
+    h1:nth-of-type(2n){
+        left: 55%;
+    }
+    .landing-container{
+        background: 
+        repeating-linear-gradient(	45deg,		black, 			black 1px, transparent 1px, transparent 25px),
+        radial-gradient(circle at 50% 40%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
+        radial-gradient(circle at 50% 100%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
+    
+        repeating-linear-gradient(	45deg,		#eaa8b7, 			#eaa8b7 2px, transparent 2px, transparent 25px),
+        radial-gradient(circle at 51.5% 9.5%, black 0%, black 25%, transparent 10%, transparent 100%),
+        radial-gradient(circle at 50% 67%, black 0%, black 25%, transparent 10%, transparent 100%),
+        linear-gradient(90deg,	#eaa8b7 0%, 	#eaa8b7 50%, black 50%, black 100%);
+        
+        ;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .backdrop-container{
+        left: 20%;
+        top: 70%;
+        width: 45vw;
+    }
+    .backdrop-container-2{
+        width: 45vw;
+        top: 20%;
+        left: 55%;
+    }
+    .img-container{
+        width: 65vw;
+        aspect-ratio: 1;
+    }
+}

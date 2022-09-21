@@ -27,15 +27,12 @@
         <!-- Decorative Banner for Instagram logo and Handle -->
         <div class = 'bar'>
             <img src = "instaLogo.svg" style = "width: 50px; height: 50px;">
-            <h1 style = 'letter-spacing: 2px; margin-left: 10px;'>@cactusmodelinginc</h1>
+            <h1 style = 'letter-spacing: 2px; margin-left: 10px;'>cactusmodelinginc</h1>
         </div>
 
     <!-- Main Head Grid -->
 
-    <div class = 'mainGrid'>
-
-        <!-- Found this to be easiest for separating the img for JS implementation -->
-        <!-- THIS IMAGE IS RESPONSIVE TO PAGE SIZE (width) -->
+    <div class = 'header-container'>
 
         <div class = 'imgContainer'>
             <img id = 'mainImg'src = "https://img1.wsimg.com/isteam/stock/o30GPlr/:/rs=h:500,cg:true,m" alt="Model Sample Image">
@@ -58,7 +55,7 @@
 
     <!-- Bottom Decorative Bar -->
 
-        <div class="bar" style="height: 10vh;"></div>
+        <div class="bar"></div>
 
     <!-- Body Content -->
     <!-- Contains About information and is grid formatted -->
@@ -93,15 +90,15 @@
 
         <!-- I loved these bars, can you tell? Idk, they look nice! -->
 
-        <div class="bar" style="height: 10vh; margin-bottom: 3vh;"></div>
+        <div class="bar"></div>
 
         <!-- Form that will never get used because the company was shady -->
         <!-- 
             If redone, I would use a Mongon DB to store form submissions 
             Netlify is okay for this deprecated project for now
         -->
-        
-        <h1 id = 'formHead' style="text-align: center; margin-bottom: 3vh; font-size: 6vw;">SCHEDULE AN INTERVIEW</h1>
+        <div class="form-container">
+        <h1 class="form-header" id = 'formHead'>SCHEDULE AN INTERVIEW</h1>
         <p id = 'formDesc' class = "contactFormSum">We are looking for Part time Models who would like to work a Flexible Schedule and get paid weekly. We are looking for candidates with an outgoing personality while being punctual and having the desire to love their job.</p>
         <form id = 'form' class = 'center col s1' name="contact" method="POST" data-netlify="true">
             <input type = 'text' class = "contactformInputs" style = 'width:50%; font-size: 25px; margin-top: 30px;' placeholder="Name*">
@@ -109,10 +106,7 @@
             <input type = 'text' class = "contactformInputs"  style = 'width:50%; font-size: 25px; margin-top: 30px;' placeholder="Instagram*">
             <button type = 'submit' class = "contactformSubmit" style=" margin-top: 30px;" placeholder="Name">SUBMIT</button>
         </form>
-        
         <!-- ALL. THE. BARS! -->
-
-        <div class = 'bar'></div>
 
         <!-- Extra info: Hours -->
 
@@ -126,6 +120,10 @@
             <li>Sat Closed</li>
             <li>Sun Closed</li>
         </ul>
+        </div>
+
+        <div class = 'bar'></div>
+
         
         <script src="main.js"></script>
     </body>

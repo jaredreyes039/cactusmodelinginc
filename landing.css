@@ -16,11 +16,6 @@ body{
     overflow: hidden !important;
     background: 
     repeating-linear-gradient(	45deg,		black, 			black 1px, transparent 1px, transparent 25px),
-    radial-gradient(circle at 50% 40%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
-    radial-gradient(circle at 50% 100%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
-
-    radial-gradient(circle at 51.5% 9.5%, black 0%, black 20%, transparent 10%, transparent 100%),
-    radial-gradient(circle at 50% 67%, black 0%, black 20%, transparent 10%, transparent 100%),
     linear-gradient(90deg,	#eaa8b7 0%, 	#eaa8b7 50%, black 50%, black 100%);
     
     ;
@@ -41,7 +36,7 @@ body{
     z-index: 2;
     box-shadow: 7px -1px 5px 5px rgba(0, 0, 0, 0.333)    ;
     transform: translate(-50%, -50%);
-    background-color: #fff5ee36;
+    background-color: #fff5ee95;
     backdrop-filter: hue-rotate(90deg) grayscale();
     border-radius: 25px;
 }
@@ -49,8 +44,7 @@ body{
     font-size: 5em;
     width: 100%;
     text-align: center;
-    color: transparent;
-    text-shadow: 2px 1px whitesmoke, -1px 4px black, 4px 0px black;
+    text-shadow: 2px 1px black, 0px 0px black, 4px 0px black;
     letter-spacing: 0.25em;
 }
 .img-sqr{
@@ -66,6 +60,8 @@ body{
     content: "";
     aspect-ratio: 1;
     background-color: whitesmoke;
+    opacity: 0;
+    animation: fadeIn 500ms ease-in-out forwards;
 }
 .img-sqr>img{
     position: relative;
@@ -74,6 +70,42 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+@keyframes slideInFromLeft {
+    0%{
+        left: -1050%;
+    }
+    100%{
+        left: -20%;
+    }
+    
+}
+@keyframes slideInFromRight {
+    0%{
+        left: 1050%;
+    }
+    100%{
+        left: 50%;
+    }
+    
+}
+
+@keyframes fallIntoPlace{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fadeIn{
+    100%{
+        opacity: 1;
+    }
 }
 h1{
     z-index: 0;
@@ -85,13 +117,15 @@ h1{
     transform: scaleY(2) scaleX(1.25);
     letter-spacing: 0.05em;
     text-shadow: 1px 1px white, -1px -1px black;
+    animation: slideInFromLeft 500ms ease-in-out forwards;
 }
 h1:nth-of-type(2n){
     transform: scaleY(2) scaleX(1.25);
-    left: 60%;
+    left: 50%;
     bottom:80%;
     z-index: 0;
     text-shadow: 1px 1px white, -1px -1px #eaa8b7;
+    animation: slideInFromRight 500ms ease-in-out forwards;
 }
 .landing-img:before{
     width: 50vw;
@@ -127,33 +161,48 @@ h1:nth-of-type(2n){
     background: repeating-linear-gradient(		#e2738c, 		#e2738c 20px, black 20px, black 25px);
 }
 .backdrop-container-2{
-    filter:drop-shadow(20px 10px white);
-    box-shadow: 7px -1px 5px 5px rgba(0, 0, 0, 0.333)    ;
+    box-shadow: 7px -1px 5px 5px rgba(0, 0, 0, 0.333), 3px -1px 3px 3px rgba(0, 0, 0, 1)    ;
     z-index: 1;
     position: absolute;
-    left: 65%;
-    top: 15%;
+    left: 1%;
+    top: 10%;
     content: '';
     width: 15vw;
     aspect-ratio: 1;
+    opacity: 0;
     border: 2px solid white;
+    border-radius: 50%;
+    animation: fallIntoPlace 500ms ease-in-out forwards;
     background: repeating-linear-gradient(		#e2738c, 		#e2738c 20px, white 20px, white 25px);
 }
 .nav-list{
+    width: 25%;
     list-style: none;
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+    text-align: center;
+    line-height: 2em;
 }
 .nav-list>li{
     font-weight: 1000;
+    opacity: 0;
+    animation: fadeIn 1000ms ease-in-out forwards;
 }
 .nav-list>li>.link{
-    text-decoration: none;
+    animation: fadeIn 1000ms ease-in-out forwards;
     color: white;
     transition: all 150ms ease-in-out;
-    text-shadow: 1px 1px white, -1px -1px #eaa8b7;
-
+    opacity: 0;
+    text-decoration: none;
+    border-bottom: white 2px solid;
+    padding: 0%;
 }
 .nav-list>li>.link:hover{
     color: #e2738c !important;
+    border-bottom: #e2738c 2px solid;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
 }
 .nav-list>li>.link:visited{
     color: white;
@@ -177,14 +226,16 @@ h1:nth-of-type(2n){
     h1{
         font-size: 6.5em !important;
     }
-    .img-container>h2{
-        font-size: 4em;
+    .backdrop-container-2{
+        top: 15%;
     }
-    .backdrop-container, .backdrop-container-2{
-        width: 25vw;
+    .nav-list{
+        width: 50%;
+        font-size: 0.95em;
+        right: 1.25%;
     }
-    .img-container{
-        width: 55vw;
+    .img-sqr{
+        width: 35%;
     }
 }
 @media only screen and (max-width: 1220px){
@@ -192,7 +243,7 @@ h1:nth-of-type(2n){
         font-size: 5.5em !important;
     }
     .img-sqr{
-        width: 50%;
+        width: 30%;
     }
     .backdrop-container{
         left: 25%;
@@ -212,19 +263,27 @@ h1:nth-of-type(2n){
     h1:nth-of-type(2n){
         top: 10%;
     }
+    .nav-list{
+        font-size: 0.8em;
+        bottom: 40%;
+    }
 
 }
 @media only screen and (max-width: 880px){
     h1{
         font-size: 7em;
     }
+    .img-sqr{
+        width: 40%;
+    }
     .backdrop-container{
         left: 20%;
         top: 70%;
     }
     .backdrop-container-2{
-        top: 25%;
-        left: 70%;
+        top: 18%;
+        width: 20%;
+        left: -5%;
     }
     .img-container{
         width: 55vw;
@@ -233,13 +292,32 @@ h1:nth-of-type(2n){
     }
 }
 @media only screen and (max-width: 880px){
+    .landing-container{
+        background: black;
+    }
+    .img-sqr{
+        display: none;
+    }
+    .backdrop-container-2{
+        display: none;
+    }
     h1{
-        left: -47%;
+        font-size: 2em !important;
+        text-shadow: none !important;
+        animation: none !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        left: 15% !important;
+        top: 20% !important;
     }
-    h1:nth-of-type(2n){
-        left: 30%;
+    h1:nth-of-type(1){
+        display: none;
     }
-
+    .nav-list{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 @media only screen and (max-width: 700px){
     h1{
@@ -247,18 +325,6 @@ h1:nth-of-type(2n){
     }
     h1:nth-of-type(2n){
         left: 55%;
-    }
-    .landing-container{
-        background: 
-        repeating-linear-gradient(	45deg,		black, 			black 1px, transparent 1px, transparent 25px),
-        radial-gradient(circle at 50% 40%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
-        radial-gradient(circle at 50% 100%, #eaa8b7 0%,#eaa8b7 15%, transparent 15%, transparent 100%),
-    
-        radial-gradient(circle at 51.5% 9.5%, black 0%, black 25%, transparent 10%, transparent 100%),
-        radial-gradient(circle at 50% 67%, black 0%, black 25%, transparent 10%, transparent 100%),
-        linear-gradient(90deg,	#eaa8b7 0%, 	#eaa8b7 50%, black 50%, black 100%);
-        
-        ;
     }
 }
 

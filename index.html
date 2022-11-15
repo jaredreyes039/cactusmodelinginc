@@ -1,49 +1,155 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>CactusModelingInc. Redesign</title>
-        <meta name="description" content="">
+        <meta name="description" content="A redesign of Tucson's CactusModelingInc. website. With a better palette, more details, and
+        overall a complete change in theme, this is a serverless project with style!">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="main.css">
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="./landing.css">
     </head>
+
     <body>
-        <div class = "landing-container">
-            <div class = "nav-container">
-                <ul class = "nav-list">
-                    <li>See how being yourself can change your life, forever!</li>
-                    <li><a href = "./home/home.html" class = 'link'>Enter Site!</a></li>
-                </ul>
+
+        <!-- LANDING/HEADER -->
+
+        <section class = 'landing-body'>
+            <img src = "https://img1.wsimg.com/isteam/stock/o30GPlr/:/rs=h:500,cg:true,m">
+            <div class="landing-text">
+                <h1>Cactus<span class='pink-text'>Modeling</span>Inc</h1>
+                <p>
+                    Feeling fearless? Ready to make your mark? Here at CactusModelingInc.,
+                    we'll fulfill your modeling dream, one amazing photoshoot at a time.
+                </p>
+                <p>
+                    Sound too good to be true? We welcome you to fill out our brief application below, and see
+                    for yourself what CactusModelingInc. is all about!
+                </p>
+                <form id = 'form' class="landing-form" name="contact" method="POST" data-netlify="true">
+                    <input type = 'text' class = "contactformInputs"  placeholder="Name*">
+                    <input type = 'text' class = "contactformInputs"   placeholder= "Email*">
+                    <input type = 'text' class = "contactformInputs"   placeholder="Instagram*">
+                    <button type = 'submit' class = "contactformSubmit" style=" margin-top: 30px;" placeholder="Name">SUBMIT</button>
+                </form>
             </div>
-            <div class = 'landing-body'>
-<!-- 
-                <div class = 'img-container'>
-                    <h2>See How Being Yourself
-                        <br>
-                        Can Change Your Life, Forever!
-                    </h2>
-                </div> -->
-                <div class = 'img-sqr'>
-                    <img src = "https://img1.wsimg.com/isteam/stock/6mElWNk/:/rs=w:600,h:600,cg:true,m/cr=w:600,h:600">
-                </div>
-                <div class = 'backdrop-container-2'>
+        </section>
+
+        <hr></hr>
+
+        <!-- ABOUT US -->
+
+        <section class="about-body">
+            <h1>About <span class="pink-text">Us</span></h1>
+
+            <div class="about-item-container">
+                <img id = 'schedImg' src = 'https://img1.wsimg.com/isteam/stock/6mElWNk/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300' alt = 'Model Sample Image'>
+                <div id = 'sched'>
+                    <h2>Make your Own Schedule</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta facilis ratione magni aliquam velit illum sequi nam possimus temporibus. Deserunt qui, aspernatur laudantium maxime repudiandae ducimus dicta voluptatem voluptatibus harum.</p>
                 </div>
             </div>
-            <h1>CACTUSMODELINGINC</h1>
-            <h1>CACTUSMODELINGINC</h1>
-        </div>
-        
-        <script src="landing.js"></script>
+            <div class="about-item-container">
+                <img id = 'payImg' class = 'payimg' src = 'https://img1.wsimg.com/isteam/stock/WbYaE6g/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300' alt = 'Amazing Pay Banner'>
+                <div id = 'sched'>
+                    <h2>Weekly Paychecks</h2>
+                    <p>Our Models Make $500-$1000 per week, and we support direct deposit, or standard paper checks issued by a major payment processing company.</p>
+                </div>
+            </div>
+            <div class="about-item-container">
+                <img id = 'schedImg' src = 'https://img1.wsimg.com/isteam/stock/5943/:/cr=t:0%25,l:0%25,w:100%25,h:70%25/rs=w:600,h:300,cg:true' alt = 'Model Sample Image'>
+                <div id = 'sched'>
+                    <h2>Be Unique, Amazing You!</h2>
+                    <p>We hire all shapes and sizes with spunky personalities, who like to make money, and want to be apart of a amazing modeling team in Tucson.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr></hr>
+
+        <!-- REVIEWS -->
+
+        <section class = 'reviews'>
+            <h1><span class="pink-text">Client</span> Reviews</h1>
+
+            <div class="review">
+                <h2>Shannon Monz</h2>
+                <p>Absolutely wonderful customer service. When I first came to this company for an interview, they were so inviting and nice to me.
+                    They are here to help and to explain anything you don't understand, without any issues!
+                </p>
+            </div>
+            <div class="review">
+                <h2>Ally Sanchez</h2>
+                <p>
+                    Always willing to help with any issues you may have! Amazing photoshoots that boosted my self-confidence on camera!
+                </p>
+            </div>
+            <div class="review">
+                <h2>Hailey Hayes</h2>
+                <p>
+                    Professional service and on point communication. I felt like a red carpet star in every shoot,
+                    and the results are no different- if you want to start modeling- this place is a MUST!
+                </p>
+            </div>
+        </section>
+
+        <hr></hr>
+
+        <!-- CONTACT US -->
+
+        <section class="contact-body">
+            <h1>Be <span class="pink-text">Queen</span> of the Desert - apply today!</h1>
+            <p>
+                Hesitation breaks hearts- be fearless, and make a change. Be fearless,
+                and be a star!
+            </p>
+            <form id = 'form-alt' class="landing-form alt-form" name="contact-alt" method="POST" data-netlify="true">
+                <input type = 'text' class = "contactformInputs"  placeholder="Name*">
+                <input type = 'text' class = "contactformInputs"   placeholder= "Email*">
+                <input type = 'text' class = "contactformInputs"   placeholder="Instagram*">
+                <button type = 'submit' class = "contactformSubmit" style=" margin-top: 30px;" placeholder="Name">SUBMIT</button>
+            </form>
+        </section>
+
+        <hr></hr>
+
+        <!-- HOURS -->
+
+        <section class="hours-body">
+            <h2><u>Hours</u></h2>
+            <ul class="hours-list">
+                <div>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+                <li>Sun</li>
+                </div>
+                <div>
+                    <li>By Appointment</li>
+                    <li>By Appointment</li>
+                    <li>By Appointment</li>
+                    <li>By Appointment</li>
+                    <li>Closed</li>
+                    <li>Closed</li>
+                </div>
+            </ul>
+        </section>
+
+        <!-- DISCLAIMER -->
+
+        <p class="disclaimer">&copy; CactusModelingIncRedesign 2022</p>
+
     </body>
 </html>

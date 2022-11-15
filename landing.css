@@ -87,16 +87,8 @@ img {
     border-radius: 4px;
     opacity: 0;
 }
-.landing-form > input:nth-of-type(1){
+.landing-form{
     animation: fadeIn 250ms ease-in-out forwards;
-
-}
-.landing-form > input:nth-of-type(2){
-    animation: fadeIn 250ms ease-in-out forwards 50ms;
-
-}
-.landing-form > input:nth-of-type(3n){
-    animation: fadeIn 250ms ease-in-out forwards 100ms;
 }
 .landing-form > input:hover{
     color: #f5768d;

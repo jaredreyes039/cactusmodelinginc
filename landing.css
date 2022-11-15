@@ -87,7 +87,7 @@ img {
     border-radius: 4px;
     opacity: 0;
 }
-.landing-form{
+.landing-form > input{
     animation: fadeIn 250ms ease-in-out forwards;
 }
 .landing-form > input:hover{

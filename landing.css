@@ -95,9 +95,8 @@ img {
     animation: fadeIn 250ms ease-in-out forwards 50ms;
 
 }
-.landing-form > input:nth-of-type(3){
+.landing-form > input:nth-of-type(3n){
     animation: fadeIn 250ms ease-in-out forwards 100ms;
-
 }
 .landing-form > input:hover{
     color: #f5768d;
